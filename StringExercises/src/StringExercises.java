@@ -9,7 +9,9 @@ public class StringExercises {
 		// TODO Auto-generated method stub
 		//System.out.println(forgivingPrompt("Respond: Y/N? "));
 		
-		System.out.println(parseName("Turing,Alan,Mathison"));
+		//System.out.println(parseName("Turing,Alan,Mathison"));
+		
+		System.out.println(add("0+31+4+81+9+10"));
 
 	}
 	
@@ -50,7 +52,15 @@ public class StringExercises {
 		
 	}
 	
-	public static void add(String line) {
+	public static int add(String line) {
 		
+		String[] numbers = line.trim().split("\\+");
+		
+		int sum = 0;
+		
+		for (int parseNumbers = 0; parseNumbers < numbers.length; parseNumbers++) {
+			sum += Integer.parseInt(numbers[parseNumbers]);
+		}	
+		return sum;
 	}
 }
