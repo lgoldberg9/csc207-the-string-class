@@ -7,7 +7,9 @@ public class StringExercises {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(forgivingPrompt("Respond: Y/N? "));
+		//System.out.println(forgivingPrompt("Respond: Y/N? "));
+		
+		System.out.println(parseName("Turing,Alan,Mathison"));
 
 	}
 	
@@ -40,7 +42,11 @@ public class StringExercises {
 		
 	}
 
-	public static void parseName(String s) {
+	public static String parseName(String s) {
+		
+		String[] names = s.split(",");
+		
+		return names[1] + " " + names[2] + " " + names[0];
 		
 	}
 	
